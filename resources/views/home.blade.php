@@ -6,6 +6,7 @@
 
         <div class="col-md-4">
             <div class="user-wrapper">
+                <i class="fa fa-user"></i>
                 <ul class="users">
                     @foreach($users as $user)
                     <li class="user" id="{{$user->id}}">

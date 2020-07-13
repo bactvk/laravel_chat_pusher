@@ -20,3 +20,10 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/message/{id}','MessageController@getMessage')->name('message');
 Route::post('/message','MessageController@sendMessage');
+
+
+Route::match(['get','post'],'/create_warning','WarningAllController@add_warning')->name('add_warning');
+
+Route::get('/view_notification', function () {
+    return view('warning.showNotification');
+});
